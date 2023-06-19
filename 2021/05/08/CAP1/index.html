@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Louis Chang">
+
+
+
+
+
+<title>我的國泰CAP實習之路（上） | Louis&#39; Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Louis&#39; Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Louis&#39; Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">我的國泰CAP實習之路（上）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Louis Chang</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">May 8, 2021&nbsp;&nbsp;19:48:54</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%AF%A6%E7%BF%92%E7%94%9F%E6%B4%BB/">實習生活</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="data:image/png;base64,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" alt="cathaybk"></p>
+<blockquote>
+<p>這個系列的文章主要會分享我這四個月的實習經驗，若有褒貶純屬個人感受，絕非業配（放心不會有人找我業配的）或是抹黑，所以還請以輕鬆的心來閱讀吧～</p>
+</blockquote>
+<p>嗨，好久沒發文章了，前陣子有點忙碌，這一兩週事情才逐漸步上軌道，終於能撥出時間寫文章了！如果有看過我之前關於Deloitte 的文章，可能會注意到我在裡面有提到我在別的地方實習（但沒意外應該是沒有人會注意到QQ）。沒錯，就如文章標題，我目前正在國泰世華銀行的資訊處實習，在內湖那邊，職位是初階應用工程師。今天你會在文章中看到：</p>
+<h1 id="你在銀行當櫃員嗎？"><a href="#你在銀行當櫃員嗎？" class="headerlink" title="你在銀行當櫃員嗎？"></a>你在銀行當櫃員嗎？</h1><p>每當跟親戚朋友談到目前實習的工作時，大概有八到九成的人會問：「你在當櫃員嗎？」「你在哪間分行下次去找你啊」之類的問題，所以我在這邊要澄清一下：</p>
+<blockquote>
+<p>我是在銀行的資訊處，不是櫃員！</p>
+</blockquote>
+<p>Btw，以上<strong>完全沒有對銀行相關人員有任何歧視的意思</strong>，只是只講銀行太容易讓人誤會了。我實習的單位是核心資訊部，負責撰寫與串接銀行內部系統的API（基本上就是幫自己內部架系統），主要使用的語言是Java 配合Spring boot 框架。說是這麼說啦，但我其實才剛上軌道而已，前兩三週都在教育訓練（誰叫我一個禮拜才去三天），這個部分後面會再詳談。</p>
+<h1 id="我怎麼在這？"><a href="#我怎麼在這？" class="headerlink" title="我怎麼在這？"></a>我怎麼在這？</h1><p>老實說，在國泰實習這黨事完全不在我去年的計畫之內，一切就像個意外，跌跌撞撞地走到了現在，就且聽我娓娓道來吧。</p>
+<p>去年的11月我參與了Deloitte為期一個月的培訓課程，當時也有意願轉為實習生，而正式的實習offer大約在今年年初時收到。</p>
+<p>培訓剛結束時，我反覆思考了許久，Deloitte提供的課程很棒，工作內容好像也不討厭，資訊背景也能帶給我不少優勢，但這真的是我想要的嗎？後來我發現，相較於思考客戶的一堆問題，我好像比較能沉下心去找bug；相較於為客戶設計解決方案，寫出一個小程式能帶給我比較多成就感。</p>
+<p>剛好在思考的這段時間，身旁許多人在準備國泰CAP實習的資料，裡面也有我有興趣的職位。於是我就抱著姑且一試的心情投履歷、參與面試，最後也非常幸運地被錄取了。雖然經過一陣子的深思之後，有稍微能聽清楚一點內心的聲音，但其實我到拿到offer 當下都還非常猶豫，甚至問了老師、家人與身邊的朋友們，才做了這個決定。</p>
+<p>你問我會後悔嗎？其實我也還不能完全確定，但我現在做的滿愉快就是了。比起其他在Medium 寫文章的大神們，我只是個還在迷惘的小菜雞，如果你也是大神，抱歉我這裡沒辦法提供你什麼，建議去觀摩其他學霸；如果你也還在迷惘，那你並不孤單。</p>
+<h1 id="這陣子都在幹嘛"><a href="#這陣子都在幹嘛" class="headerlink" title="這陣子都在幹嘛"></a>這陣子都在幹嘛</h1><p>國泰CAP，全名國泰敏捷實習生計畫 Cathay Agile Program，主打利用Agile 敏捷開發進行部門專案（不太清楚Agile的話可以去Google一下，資料滿多的），實習期間大約四個月，定期會有幾次會議驗收成果。前期主要都是在學習，這個月內上了好多課跟實作練習（感覺快要比我這學期在學校的課還多了），而內容主要可以分成Agile 以及部門業務兩個部分。</p>
+<h2 id="Agile-Scrum"><a href="#Agile-Scrum" class="headerlink" title="Agile - Scrum"></a>Agile - Scrum</h2><aside>
+💡 關於專案管理這回事，一定得親手下去做才會有感覺，光是紙上談兵完全不夠。
+
+</aside>
+
+<p>國泰世華採取的是目前很流行的Scrum，就我目前的理解，公司希望我們把整個實習當作一個專案，利用敏捷的方式進行，而專案的內容就由各部門分配。考量到大部分實習生都沒有什麼實務經驗，公司有聘請一個外部講師作為各組的Scrum Master，輔導我們進行規劃與執行，並定期舉辦課程與共同活動驗收成果。</p>
+<p>我在學校曾經修過專案管理的課程，裡面不乏有許多Agile 的內容，我一度以為我早就會了，畢竟考試時都能信手捻來。但開始實習後我才發現，自己真是太天真了，光是Planning 在分配各個工作項目時我就分得亂七八糟，講師花了不少時間才把我原本做的東西拉回正軌，幫我好好上了一課。除此之外，主管也有安排我們參與幾次standup meeting，實際觀摩業界如何真正運用Scrum。（不唬爛，真正run過幾次之後發現我之前在學校自己操作的根本像個笑話，只略懂概念但完全不會做）</p>
+<h2 id="部門業務"><a href="#部門業務" class="headerlink" title="部門業務"></a>部門業務</h2><p>我所在的部門是核心資訊部，現在正在進行核心業務移轉的專案（避免篇幅拉得太長，這邊就先不討論專案的詳細內容，如果真的有興趣歡迎再私訊我，雖然我猜應該也不會有人想知道QQ），而我們目前被分配到兩個小型API 的建置與串接。在前面有提到，第一個月幾乎都在教育訓練，因為這裡是銀行的資訊單位，工作上需要同時具備金融跟資訊的能力（但我好像都不怎麼樣），於是主管安排許多課程給我們，其中包括業務流程介紹以及資訊技術課程。</p>
+<p>業務流程的部分就是由負責該業務的同仁向我們介紹業務的內容與邏輯（包含定存、活存等等），畢竟在寫code 之前一定得要知道該服務的流程是如何運作的；資訊技術就包含Java 、Spring Boot 等等一些開發會用到的技術，然後我不得不說，這邊教Java 的講師素質真的很不錯，除了語法使用之外，物件導向等等的觀念也講解得很清楚，推！</p>
+<h1 id="一些有的沒的心得"><a href="#一些有的沒的心得" class="headerlink" title="一些有的沒的心得"></a>一些有的沒的心得</h1><p>先來說說實習這回事好了。我個人覺得，如果你未來會進到業界工作的話（要做學者的話應該就不需要惹），實習是個非常寶貴的經驗，如果沒有其他更重要的規劃的話建議一定要去！學校能教給我們很多，打下基礎，至於應用層面在業界應該能看到更多。拿軟體業來說的話，多數學校的作業都是程式可以run、不要有明顯的bug就好了，細心一點可能會做code review，最後的結果都是交完作業就丟了；然而實際工作時通常一支程式都會用很久，還要思考之後別人要如何擴充等等的，可以讓自己的思考更為全面且縝密。</p>
+<p>最後再來說說國泰這個地方。國泰在臺灣算是滿大的企業，在大公司實習的好處主要有教育訓練資源豐富、制度成熟、能幫履歷稍微加點分（有點像大企業幫你認證的概念）等等。此外，比起新創需要實習生作為即戰力，直接幫公司進行產出，大企業較能允許實習生慢慢學習，真的上軌道了再做就好（但我也不確定是不是怕我們出包所以不敢讓我們做XD）。就我個人而言，我覺得我還有很多東西需要學習，加上以後的生涯規劃需要讓履歷漂亮一點（雖然聽起來有點現實，但這是真的），所以總體而言，在國泰實習帶給我的好處更勝於壞處，所以我選擇了這裏（好像不小心填了前面挖的坑）。</p>
+<hr>
+<p>這篇文章差不多就到這邊結束啦，既然我的標題出現了「上」，就代表還會有下集的出現。沒錯！目前預計在六月底實習結束之後會再出下集（希望能準時），還請大家記得準時收看！</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/work/"># work</a>
+                    
+                        <a href="/tags/college/"># college</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2021/03/17/SpringBootSolution/">初學Spring Boot 易踩到的地雷與拆彈指南</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Louis Chang | Powered by Louis Chang
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Louis Chang">
+
+
+
+
+
+<title>2020年，我在Deloitte的那一個月 | Louis&#39; Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Louis&#39; Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Louis&#39; Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">2020年，我在Deloitte的那一個月</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Louis Chang</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">January 5, 2021&nbsp;&nbsp;19:40:27</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%AF%A6%E7%BF%92%E7%94%9F%E6%B4%BB/">實習生活</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="Deloitte-consulting-campus-seed-program-心得分享"><a href="#Deloitte-consulting-campus-seed-program-心得分享" class="headerlink" title="Deloitte consulting campus seed program 心得分享"></a>Deloitte consulting campus seed program 心得分享</h2><blockquote>
+<p>這篇文章會分享我在2020年11月參加Deloitte consulting - digital 校園種子培訓計畫的種種事情，現在寫文章的當下已經正式錄取成為實習生了！開始工作之後如果有些心得也會繼續更新文章，還請各位記得收看唷。如果你是有考慮進管顧業或是四大實習的話，希望可以把我目前的經驗及心得分享給你，如果沒有的話，也請幫我分享給你有需要的朋友們～</p>
+</blockquote>
+<p>在開始之前，我想先聲明一下，文章中可能會出現一些我覺得Deloitte 或是這個計畫的優點（當然也會有缺點），但我絕對不是在洗腦，更不是在招募，所以還請放鬆心情來閱讀～</p>
+<p>今天你會在這篇文章看到：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. Intro</span><br><span class="line">2. 為什麼我會參與這個計畫</span><br><span class="line">3. 培訓前（說明會、投履歷、面試）</span><br><span class="line">4. 培訓過程</span><br><span class="line">5. 有的沒的心得</span><br><span class="line">6. 參考資料</span><br></pre></td></tr></table></figure>
+
+<h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><p>嗨，現在正在閱讀文章的你，想必非常有可能是未來想當顧問、想進四大、或是意外看到這間公司的工作機會吧！（噓，我之前就是這樣）大家對Deloitte 的印象多半是會計師事務所，負責審計、稅務等等業務，但我待的部門則是負責顧問的業務，也就是consulting。</p>
+<p>我在Consulting 的team 是Digital，主要業務是在協助企業進行數位轉型（聽起來可能有點抽象）。那數位轉型又是什麼呢，舉例來說，今天有間企業都是用Excel 管理公司中的各種Data，但這很容易造成大家手上的資訊都不一樣等等的問題。此時，顧問就會跟企業談需求，分析問題，最後提供解決方案與協助導入。</p>
+<h1 id="為什麼我會參與這個計畫"><a href="#為什麼我會參與這個計畫" class="headerlink" title="為什麼我會參與這個計畫"></a>為什麼我會參與這個計畫</h1><p>這邊我得先坦白說，我走上管顧這條路完全都是因緣際會，原本還在思考要當哪種工程師，一開始甚至連管顧在幹嘛、四大有哪些都不知道，就莫名其妙誤上了賊船。（沒，開玩笑的）</p>
+<p>我大學讀的是資管，其實一直很煩惱以後要走技術還是管理，原本打算跟大部分人一樣選擇當工程師，但又覺得自己coding 能力普普，是一個很尷尬的情況。直到九月底我看到這個機會，工作性質偏管理，但又不會離技術太遠，感覺可以試試看就投了下去。所以這次對我來說其實算是一個嘗試與挑戰，給自己一個機會去探索自己。</p>
+<h1 id="培訓前"><a href="#培訓前" class="headerlink" title="培訓前"></a>培訓前</h1><p><img src="/image/Deloitte/DM.jpg" alt="說明會DM"></p>
+<p>說明會DM</p>
+<p>最初我是在學校ERP 中心的粉專上看到這個消息，也迷迷糊糊去聽了說明會（聽完還是迷迷糊糊，但這是我個人的問題，他們其實講的還滿清楚的），回去查了一大堆資料後才比較搞清楚狀況，也速速把履歷改一改投了下去。（這邊我要小抱怨一下，Deloitte 招募系統裡面要填的資料真的超級多，有些資料感覺明明不是很重要，做起來麻煩到不行……）</p>
+<p>幾天後，他們就寄了線上測驗的email 給我，測驗內容包括Personality Questionnaire、General Ability 與Video interview，總時長大約一個半小時。Personality Questionnaire 就是常見的那種跟職涯相關的性向測驗，這邊就不多說明了；General Ability 是跟數學還有邏輯有關的測驗，測驗時間最長，而且題目個人覺得頗難，做完感覺腦袋的CPU 快爆了（但也可能是我比較笨QQ）；Video interview 則是他會放幾個預錄好的問題，幾秒鐘後開始回答，並透過電腦的鏡頭錄起來。因為他所有的問題都是英文，所以我也是用英文回答（講到後面根本不知道自己在講什麼……），還以為是在考托福。這邊要提醒一下，如果你以後也做到這個測驗的話，請記得一次做完，否則隔太久的話系統就不開放繼續作答，我當時就是這樣，後續花了不少力氣才得以重做一次……</p>
+<p>測驗做完之後又過了幾天，我收到了面試通知信，是以Skype 線上面試的形式呈現。面試的過程非常輕鬆，面試主管也很親切，整個過程很像在聊天，問題主要都針對我提及的經歷與能力，所以這邊也來個貼心小提醒，之後面對各個面試時記得把自己經歷的故事都搞清楚，千萬不要當場才在回想！（本人我在之前別的面試有踩過雷，先幫大家預告一下）</p>
+<p>結束後大概過了一星期，我如願地收到錄取信，HR 也有聯絡我告知注意事項，於是就開始了我在Deloitte 為期一個月的生活！</p>
+<h1 id="培訓過程"><a href="#培訓過程" class="headerlink" title="培訓過程"></a>培訓過程</h1><h2 id="相見歡"><a href="#相見歡" class="headerlink" title="相見歡"></a>相見歡</h2><p>培訓的第一天沒有正式課程，主要都是讓大家認識彼此、玩幾個破冰遊戲、以及介紹之後的課程規劃（當然也有一些公司介紹的部分，你懂的，不過不會太多）。這天的時長只有一個早上，那為什麼我要特別把這天獨立出來呢？事情是這樣的，第一天大家自我介紹的時候，有好幾個同事（同學？）都是台大政大的管院，甚至還有在國外知名大學的，甚至還有很多人已經有顧問相關的經驗，直接讓我壓力大到不行，當下真的覺得我到底來了什麼地方……</p>
+<p>下面是相見歡結束後的照片（照片已經過馬賽克處理，若造成困擾請私訊，我會將照片立即下架），大家可以看到總共有13個人，這是這個計畫招募的所有人，而其中又分成SAP、A&amp;C 與Digital 三個team，每個team 的課程時間是分開的，所以其實之後只會跟同team 的人見面。</p>
+<p><img src="/image/Deloitte/photo.jpg" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/01c1ff1d-ff07-466c-9091-537aa10d56e3/S__128491529.jpg"></p>
+<h2 id="正式課程"><a href="#正式課程" class="headerlink" title="正式課程"></a>正式課程</h2><p>培訓總長為期四週，而我們team 一週要去兩次，所以扣掉相見歡之後總共有七天的課程，最後一堂則是分組進行期末發表（還以為是在上什麼超硬的必修），最後再由他們評估是否要錄取我們成為2021 年前半年的實習生。當時還有個很特別的部分，在正式課程開始之後我們會跟一批正職新人一起上課，所以這個課程應該可以算是新人培訓的一種。</p>
+<p>課程內容主要以Digital team 的業務為核心，包括專案流程、銷售技巧、系統操作、思考模式等等，就是各種在這個工作中需要運用到的能力，以課程或是遊戲的形式呈現，而每堂課都會有不同的負責講師（正職員工）來講課。老實講，所有課程的內容真的都很紮實，真的是業界實務上會用到的知識，講師也都超級用心的準備，講真的，我覺得非常有收穫，完全顛覆我原先對管理學領域的所有認知。</p>
+<h2 id="期末發表"><a href="#期末發表" class="headerlink" title="期末發表"></a>期末發表</h2><p>期末發表的主題非常開放，各組選定一間企業，點出他們目前的一些問題，並為其設計解決方案。起初我剛聽到這個主題直接是傻眼，因為在我的認知中，公司的問題通常必須要透過訪談才能得知（而且即使有去問他們也不一定會講），更何況是要設計一個解決方案，所以我一開始真的是滿徬徨。不過後來經過幾次的小組討論後，加上學姊的凱瑞（抱歉，我就躺分），漸漸找到了方向，最後也完整的設計一份解決方案。我們選擇的企業是某點數整合行銷公司，所有資料都來自網路（新聞、文章等等），但你也知道，會放在報導上的資訊有限，所以很多東西只能靠自己分析、推敲，其實也無形中磨練一些顧問所需的能力，同樣讓我收穫滿滿。</p>
+<p>課程結束後，Deloitte 也頒發給每個人一張結業證書（雖然看起來很簡單，但有護貝就給過），也跟我們談談之後實習的事情，但正式的offer 之後才會通知。（這邊我想抱怨一下，從課程結束到拿到offer 真的隔超級久！我心中的大石頭卡了有一個多月之久……）</p>
+<p><img src="/image/Deloitte/certificate.jpg" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/199f75f9-90f5-4ad2-9562-26c13e872486/Image_00001.jpg"></p>
+<h1 id="有的沒的心得"><a href="#有的沒的心得" class="headerlink" title="有的沒的心得"></a>有的沒的心得</h1><p>我大學讀的是中央大學資管系，我一直覺得我們系上的風氣都是偏資訊導向（學霸們大多都往資工發展），雖然說是資管，但在商業概念方面就相對比較不足，而這也是我這一個月覺得最受震撼的部分。在專案進行的過程中，顧問需要跟企業進行需求訪談及設計解決方案，而這之中需要運用到大量的商業概念，所以在課程的各個討論過程中，我深深意識到自己在這部分的不足，還有數不清的事物需要學習。</p>
+<p>最後，雖然這個課程是針對顧問所設計，但我覺得顧問的能力其實能運用在生活中各個方面，不只侷限於這份工作。舉例來說，一個資管系的學生在四年中會接觸到很多種程式語言，但如果之後你不再當工程師，這個能力基本上就不會用到了（我知道理解程式語言背後的邏輯與架構還是會有其他無形的幫助，但我只是想舉個例幫助理解）；另一方面，顧問的思考模式、邏輯分析與銷售技巧不僅可以用在其他工作，也能運用在生活中的各種情況。當然，世界上沒有一件事是完全好的，顧問業也有非常多缺點，有時候真的會寧願去寫code 而不是跟客戶吵架，所以我想說的是，沒有好不好，只有適不適合而已。雖然經過了一個月的培訓，我還是不確定自己到底適不適合這個行業，所以我打算再實習半年，實際參與工作內容後再下決定。</p>
+<hr>
+<p>這篇文章差不多就到這邊結束啦，我開始實習之後應該也會定期把我學到或想分享的東西寫在文章裡（希望），還請大家記得來看唷！</p>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><p>礙於篇幅的關係，這篇文章會以我個人的心得分享為主，至於其他與四大、顧問業相關的資料就請參見以下的連結：</p>
+<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%9B%9B%E5%A4%A7_(%E6%9C%83%E8%A8%88%E5%B8%AB%E8%A1%8C)">四大 (會計師行)</a></p>
+<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%AE%A1%E7%90%86%E5%92%A8%E8%AF%A2">管理諮詢</a></p>
+<p><a target="_blank" rel="noopener" href="https://ntuibdept.wordpress.com/industrycolumn/%E6%9C%80%E9%9B%A3%E6%87%89%E5%BE%B5%E7%9A%84%E5%B7%A5%E4%BD%9C%EF%BC%9F%E4%B8%80%E7%AA%BA%E7%A5%9E%E7%A7%98%E7%9A%84%E7%AE%A1%E9%A1%A7%E6%A5%AD/">最難應徵的工作？一窺神秘的管顧業</a></p>
+<p><a target="_blank" rel="noopener" href="https://medium.com/alexchanglife">艾力克斯的顧問筆記 - Medium</a></p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/work/"># work</a>
+                    
+                        <a href="/tags/college/"># college</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2021/02/26/SpringBootSelfLearning/">Spring Boot 入門自學資源統整</a>
+            
+            
+            <a class="next" rel="next" href="/2020/12/13/militaryEp4/">EP4｜哪尼！結訓日我還在塗水泥？</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Louis Chang | Powered by Louis Chang
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

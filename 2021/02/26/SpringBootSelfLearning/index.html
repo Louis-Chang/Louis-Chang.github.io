@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Louis Chang">
+
+
+
+
+
+<title>Spring Boot 入門自學資源統整 | Louis&#39; Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Louis&#39; Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Louis&#39; Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Spring Boot 入門自學資源統整</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Louis Chang</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">February 26, 2021&nbsp;&nbsp;23:14:31</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%8A%80%E8%A1%93%E7%AD%86%E8%A8%98/">技術筆記</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <blockquote>
+<p>這篇文章會提供我在自學Spring Boot 過程中用到的資源以及一些心得分享，之後也會出一篇較短的Spring Boot 地雷及拆彈指南，希望可以幫助大家在自學Spring Boot 的路上少走一點歪路！</p>
+</blockquote>
+<p>在開始之前，我想先說明一下，以下提供的純屬我個人在自學過程中曾經使用過的資源，絕非業配（也不會有人找我業配QQ），如果你還知道其他不錯的資源也歡迎提供給我！第一部分主要會是我對於Udemy 這個課程的個人心得，如果只是想看自學資源的話可以直接跳到後面～</p>
+<h1 id="課程心得分享"><a href="#課程心得分享" class="headerlink" title="課程心得分享"></a>課程心得分享</h1><p><a target="_blank" rel="noopener" href="https://www.udemy.com/course/spring-boot-u/">Spring Boot從入門到高級實戰課程</a></p>
+<h2 id="為什麼我會想學Spring-Boot"><a href="#為什麼我會想學Spring-Boot" class="headerlink" title="為什麼我會想學Spring Boot"></a>為什麼我會想學Spring Boot</h2><p>我在網路上看過很多大神的文章，學東西常常只是因為興趣、好玩，沒有什麼特別的目的，然後莫名其妙就變超強了（好羨慕）。但很不幸的是，我只是個平凡人，主要是因為之後實習工作內容會用到，Java 又是我接觸比較久的語言，再加上對於框架又沒什麼概念（我好爛QQ），所以就在茫茫框架之海中選了Spring Boot！</p>
+<h2 id="為什麼我會選這個課程"><a href="#為什麼我會選這個課程" class="headerlink" title="為什麼我會選這個課程"></a>為什麼我會選這個課程</h2><p>現在市面上有非常多個線上課程的平台，資訊相關課程的話很多人會選擇Coursera、Udemy、Codecademy、Udemy等等，而我這次選擇的是Udemy，因為他很便宜！（沒錯，就是這麼膚淺的原因）平常官網上的價格區間大概在兩千到五千，但折扣的時候只需要三百多！（你沒看錯，是一折不是九折）這門課程原本定價是3690，而我當時只花了370就買到了這門課。除此之外，Udemy還有提供30天退款保證，如果看了不喜歡還有後悔的機會（如果你很猛的話當然也能在30天內速速看完然後退款）。所以如果你之後也想買Udemy的課程的話，請務必選在特價的時候，我印象中滿常有折扣的，這部分就要麻煩你自己去查一下囉，然後FB有些社團會公布折扣或是限免的訊息，可以加入看看。</p>
+<h2 id="課程心得"><a href="#課程心得" class="headerlink" title="課程心得"></a>課程心得</h2><p>對於這門課我個人推薦程度是4顆星（滿分5顆）！</p>
+<p>這是由一個中國的老師開的，課程語言以簡體中文為主，老師講解的算滿清楚、容易理解，也會一步一步的帶著打code，滿適合Spring Boot 的初學者的，但還是建議有一點Java的基礎再學比較好，因為課程裡面比較沒有提到一些Java的基礎觀念。此外，課程的架構是以小專案作為主軸，帶著學生使用各種會用到的東西，個人滿喜歡這種上課模式。</p>
+<p>講完優點就來說說一些小缺點吧，首先是老師的英文發音真的是不太好，有時候已經不是口音的問題了，是直接把單字整個念錯，所以如果你對於英文發音很敏感的話不建議買這門課。再來是code版本問題，因為這門課已經上架好一陣子了，有些課程裡面的函式用法跟現在不太一樣，編譯不給過的話就需要自己再查一下囉～</p>
+<h1 id="各種主題資源"><a href="#各種主題資源" class="headerlink" title="各種主題資源"></a>各種主題資源</h1><h2 id="Spring-Boot"><a href="#Spring-Boot" class="headerlink" title="Spring Boot"></a>Spring Boot</h2><p><a target="_blank" rel="noopener" href="https://medium.com/learning-from-jhipster/spring-boot/home">Spring Boot 從零開始 - learning-from-jhipster - Medium</a></p>
+<p><a target="_blank" rel="noopener" href="https://medium.com/chikuwa-tech-study/spring-boot-%E7%AC%AC1%E8%AA%B2-%E5%BB%BA%E7%AB%8B%E5%88%9D%E5%A7%8B%E5%B0%88%E6%A1%88-214ff084f787">Spring Boot-第1課-建立初始專案</a></p>
+<p><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10213097">[Day 1] - Spring Boot 是什麼 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天</a></p>
+<p><a target="_blank" rel="noopener" href="https://hackmd.io/@MonsterLee/HJyAdgRBB">一次搞懂POJO、PO、DTO、VO、BO - HackMD</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/cielosun/articles/5752272.html">Java Web基础–Controller+Service +Dao三层的功能划分</a></p>
+<h2 id="REST"><a href="#REST" class="headerlink" title="REST"></a>REST</h2><p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2011/09/restful.html">理解RESTful架构</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2014/05/restful_api.html">RESTful API 设计指南</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html">RESTful API 最佳实践</a></p>
+<p><a target="_blank" rel="noopener" href="https://tw.alphacamp.co/blog/rest-restful-api">什麼是REST? 認識 RESTful API 路由語義化設計風格｜ALPHA Camp Blog</a></p>
+<p><a target="_blank" rel="noopener" href="https://ihower.tw/blog/archives/1542">什麼是REST跟RESTful?</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.looah.com/source/view/2284">How I Explained REST to My Wife | Looah</a></p>
+<h2 id="JPA"><a href="#JPA" class="headerlink" title="JPA"></a>JPA</h2><p><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10229808?sc=rss.qu">[Java] JPA 是什麼? - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天</a></p>
+<p><a target="_blank" rel="noopener" href="https://medium.com/learning-from-jhipster/13-%E7%94%9A%E9%BA%BC%E6%98%AF-jdbc-orm-jpa-orm%E6%A1%86%E6%9E%B6-hibernate-c762a8c5e112">(13) 甚麼是 JDBC、ORM、 JPA、ORM框架、Hibernate</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.infoworld.com/article/3379043/what-is-jpa-introduction-to-the-java-persistence-api.html">What is JPA? Introduction to the Java Persistence API</a></p>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><p><a target="_blank" rel="noopener" href="https://blog.longwin.com.tw/2009/06/query-mysql-show-grant-permission-2009/">查詢 MySQL 對 此帳號 開放(GRANT)哪些權限</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=tWUeIseeLrw">[MySQL][關聯式資料庫][DB] 安裝教學#03. [Mac] 用官方安裝檔安裝MySQL</a></p>
+<h2 id="Thymeleaf"><a href="#Thymeleaf" class="headerlink" title="Thymeleaf"></a>Thymeleaf</h2><p><a target="_blank" rel="noopener" href="https://iter01.com/518210.html">Thymeleaf從入門到精通</a></p>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/40899494/how-to-get-input-values-from-spring-boot-thyme-leaf-to-java-class">How to get input values from spring boot thyme leaf to java class?</a></p>
+<h2 id="Java-web-架構"><a href="#Java-web-架構" class="headerlink" title="Java web 架構"></a>Java web 架構</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/cielosun/articles/5752272.html">Java Web基础–Controller+Service +Dao三层的功能划分</a></p>
+<h2 id="IDEA-自動重啟解決方案"><a href="#IDEA-自動重啟解決方案" class="headerlink" title="IDEA 自動重啟解決方案"></a>IDEA 自動重啟解決方案</h2><p><a target="_blank" rel="noopener" href="https://www.zybuluo.com/lirenmi/note/851329">使用Spring Boot 在IDEA自动重启解决方案</a></p>
+<h2 id="Java-bean-validation-constraints"><a href="#Java-bean-validation-constraints" class="headerlink" title="Java bean validation constraints"></a>Java bean validation constraints</h2><p><a target="_blank" rel="noopener" href="https://javaee.github.io/tutorial/bean-validation002.html">Using Bean Validation Constraints</a></p>
+<h2 id="Http-status-code"><a href="#Http-status-code" class="headerlink" title="Http status code"></a>Http status code</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Status">HTTP 狀態碼</a></p>
+<h2 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h2><p><a target="_blank" rel="noopener" href="https://medium.com/appxtech/spring-aop%E7%99%BD%E8%A9%B1%E6%96%87-%E6%B7%BA%E8%AB%87spring-aop%E7%9A%84%E5%AD%B8%E7%BF%92%E5%88%86%E4%BA%AB-1985489d008">Spring AOP白話文，淺談Spring AOP的學習分享</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xrq730/p/8628945.html">Java日志框架：logback详解</a></p>
+<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Log4j">log4j</a></p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/tech/"># tech</a>
+                    
+                        <a href="/tags/java/"># java</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2021/03/17/SpringBootSolution/">初學Spring Boot 易踩到的地雷與拆彈指南</a>
+            
+            
+            <a class="next" rel="next" href="/2021/01/05/Deloitte/">2020年，我在Deloitte的那一個月</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Louis Chang | Powered by Louis Chang
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

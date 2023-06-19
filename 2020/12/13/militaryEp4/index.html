@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Louis Chang">
+
+
+
+
+
+<title>EP4｜哪尼！結訓日我還在塗水泥？ | Louis&#39; Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Louis&#39; Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Louis&#39; Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">EP4｜哪尼！結訓日我還在塗水泥？</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Louis Chang</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">December 13, 2020&nbsp;&nbsp;17:43:59</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E8%BB%8D%E6%97%85%E7%94%9F%E6%B4%BB/">軍旅生活</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?cs=srgb&dl=pexels-rodolfo-quir%C3%B3s-2219024.jpg&fm=jpg" alt="img"></p>
+<blockquote>
+<p>這個系列主要會分享我大學兩個暑假當海陸仔的經驗以及想法（絕對不是因為我多熱愛我的軍旅生活），目前預計會用5集的篇幅寫，之後有更新集數的話我也會把其他集的連結放在文章的最後面。如果你是有考慮暑假當兵或是抽到海陸的男生的話，那這系列的內容應該會對你滿有幫助的，如果妳是女生的話也歡迎分享給你的男朋友或是男性朋友～</p>
+</blockquote>
+<h1 id="迷彩中的多數黑白"><a href="#迷彩中的多數黑白" class="headerlink" title="迷彩中的多數黑白"></a>迷彩中的多數黑白</h1><blockquote>
+<p>人生可以是黑白的，但不能是迷彩的</p>
+</blockquote>
+<p>欸怎麼又是這句，沒梗了嗎？威～才沒有！我只是想強調一下，讓大家可以把這句話銘記在心中，不過如果是經過審慎思考的話，國軍online也是個不錯的選擇！</p>
+<p>雖然我這幾篇文章都寫得口沫橫飛，但其實在裡面的生活多數都是頗單調的，幾乎沒有一天是不想放假的。繼上一篇介紹完一些比較特別或比較有趣的事情之後，這篇會跟你說一些比較辛苦或是苦悶的事情，但我還是會盡可能寫的有趣一點！</p>
+<h2 id="兩萬五千里長征"><a href="#兩萬五千里長征" class="headerlink" title="兩萬五千里長征"></a>兩萬五千里長征</h2><p><a target="_blank" rel="noopener" href="https://www.google.com.tw/maps/dir/%E5%B1%8F%E6%9D%B1%E7%B8%A3%E5%85%A7%E5%9F%94%E9%84%89%E4%B8%AD%E5%8B%9D%E8%B7%AF%E5%B1%8F%E6%9D%B1%E9%BE%8D%E6%B3%89%E6%B5%B7%E8%BB%8D%E9%99%B8%E6%88%B0%E9%9A%8A%E6%96%B0%E8%A8%93%E4%B8%AD%E5%BF%83(%E5%8D%97%E7%87%9F)/912%E5%B1%8F%E6%9D%B1%E7%B8%A3%E5%85%A7%E5%9F%94%E9%84%89+%E9%9A%98%E5%AF%AE%E9%9D%B6%E5%A0%B4/@22.6795665,120.6065001,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x346e3cecd4093319:0xad1e7caca7db0184!2m2!1d120.5966764!2d22.6692149!1m5!1m1!1s0x346e3b905ba9dd49:0xc5707648fc167e31!2m2!1d120.6338344!2d22.6876163!3e2">屏東龍泉海軍陸戰隊新訓中心(南營) to 隘寮靶場</a></p>
+<p>還記得在EP1 中提到的隘寮靶場嗎？海陸仔只要是打靶都會來這裡，雖然主要的交通方式都是坐帥到爆的中戰（等等會幫大家科普一下），但俗話說萬事起頭難（到底有什麼關係），我們第一次去靶場是用走路的！根據上面的Google Maps 顯示，從營區走到靶場距離約5公里，開車大約10分鐘，走路大約一個多小時。</p>
+<p>看到這邊你可能會覺得，這距離其實也還好嘛，一個多小時也沒多久啊，到底有什麼好寫的？對，因為我實在沒東西寫了（威～才沒有）雖然距離跟時間看起來都還好，但對於一個從出生到大學都在桃園市成長的桃園俗，可以穿著迷彩服漫步於屏東的鄉間真的是件超特別的體驗！</p>
+<p>當天我記得好像吃完早餐就從營區出發，雖然說是行軍，但身上的裝備其實清到不行，大背包都沒背了，更不用說什麼土工器具，身上稍微重一點的東西就是我頭上的鋼盔還有水壺。龍泉是個超級鄉村的地方，只有剛從營區出來時幾間軍用品店跟商店，再往下走建築物就會越來越稀少，日本製的壓縮機也……（抱歉，爛梗還用了兩次）路兩旁就漸漸變成了種滿檳榔樹的檳榔園～（看膩了中央的松樹偶爾看看檳榔樹也不錯）</p>
+<p>總之，因為距離不長，算是個不錯的早晨散步，只是天氣稍微熱了一點（更正，是非常熱），如果之後有機會再來的話我一定會騎車！</p>
+<p><img src="https://e.share.photo.xuite.net/phyllischang1111/1e394b6/8007289/314902333_m.jpg" alt="https://e.share.photo.xuite.net/phyllischang1111/1e394b6/8007289/314902333_m.jpg"></p>
+<h2 id="中型戰術輪車（中戰）"><a href="#中型戰術輪車（中戰）" class="headerlink" title="中型戰術輪車（中戰）"></a>中型戰術輪車（中戰）</h2><p><img src="https://lh6.ggpht.com/_bHDCusLD2XY/S6_wF8zH5yI/AAAAAAAAK0w/7juMKSS7n48/s1600/%E4%B8%AD%E5%9E%8B%E6%88%B0%E8%A1%93%E8%BC%AA%E8%BB%8A%20DSC05938.JPG" alt="https://lh6.ggpht.com/_bHDCusLD2XY/S6_wF8zH5yI/AAAAAAAAK0w/7juMKSS7n48/s1600/中型戰術輪車%20DSC05938.JPG"></p>
+<p>中型戰術輪車，又稱中戰，為三陽工業與美國國際汽車公司合作生產的軍用卡車。</p>
+<ul>
+<li>總重量: 15.8噸</li>
+<li>全長: 8.06公尺</li>
+<li>全寬: 2.41公尺</li>
+<li>全高: 3.00公尺</li>
+<li>乘員: 24人(含操作人員)</li>
+<li>最大速度: 100公里&#x2F;小時</li>
+<li>馬力: 250匹</li>
+<li>涉水深度: 0.80公尺</li>
+</ul>
+<h2 id="1985，你就幫我？"><a href="#1985，你就幫我？" class="headerlink" title="1985，你就幫我？"></a>1985，你就幫我？</h2><blockquote>
+<p>免責聲明：以下純屬本人主觀意見，還請別為了這個筆戰</p>
+</blockquote>
+<p>在這個段落我會先介紹1985 專線，再跟大家分享一下當時我身邊發生的相關事件，話題比較嚴肅一點，沒興趣的朋友們可以跳過這段，不過記得不要一次全部跳完ㄟ～</p>
+<p>1985 這支電話，當過兵的你肯定聽過，沒當過兵的可能也在新聞上看到過，沒錯，1985 專線就是國防部的 諮ㄕㄣ詢ㄙㄨˋ 專線，打過去之後會直接由國防部的專人幫你服務。自2013年洪仲丘事件過後，軍中最黑暗的那塊角落從裡到外被翻了好幾遍，民間也成立了如「公民1985行動聯盟」等等相關的公民團體，在這之後國防部對於軍人權益就非常重視。</p>
+<p>在談我們連上當時發生的事情前，先來為大家做個前情提要。還記得我在EP1 中提及的新兵生活嗎？不記得也沒關係，總之每天所有的行程時間都是規定好的，雖然有一些是可以讓連長彈性處理，但幾點到幾點要幹嘛這種「時間區間」就有明文規定。雖然已經有白紙黑字寫好，但各連的連長還是會依照自己的需求彈性調整時間，例如早一點吃飯、早一點睡覺等等，而這些調整對我大致都還算有利（或許有些不好的調整我不知道，但這邊就只說明我所知道的）。</p>
+<p>彈性調整過後的作息就這樣持續了好幾週，已經差不多成為了我們平常的作息模式，直到有天，連長把全連所有人集中到天臺（註1），表情十分嚴肅。「你們有誰對我的帶領方式不滿意嗎？」他緩緩地說出第一句話，平淡的語氣看似經過刻意的壓抑，大家一開始都還搞不清楚是怎麼回事，也無從回答。接著他開始說明情況，事情主要是，連上有人不滿原先的表定作息被調整，打了1985 專線對這件事提出申訴，於是這個案件就從上層回到了連上。在說明事件的過程中，連長的語氣十分激動，他想表達的意思大概是，彈性調整時間是為了讓我們生活更方便，而我們卻還反咬他一口，他有種遭到背叛的感覺（其中我省略了很多較帶有情緒的言論），語畢，他鬱悶地走回連長室，將時間交回班長進行原先的課程。在這之後，我們的生活作息並沒有什麼大幅度的改變，用手機的時間沒有縮短，有空的時候還是有看電影，好像這件事沒發生一樣。</p>
+<p>對於這個事件，我覺得這個專線有存在的必要，但還是在權利受侵害且跟上級反應無用時，再撥打會比較好，否則還是會造成我們自己的不方便。在我兩年待的兩個不同單位中，雖然班長講話有時候很雞巴，但都還是可以溝通的，也如同我前面所提及，在洪仲丘事件過後，軍方也對這部分特別謹慎，會盡快處理新兵反應的問題；但如果是直接撥打1985的話，案件會經過高層再回到連上，一層一層叮囑自己的部下解決問題。當被自己的長官「叮囑」時，我相信不會有人會開心的，而這股不開心的情緒最終又會回到所有新兵身上，這就是我想表達的「不方便」。</p>
+<p>總而言之，如果你的權利遭到侵害而跟上級反應又沒有時，請務必撥打1985 申訴，不要讓自己的權利睡著了；如果是其他對生活影響不大甚至沒有影響的事，直接跟上級反應會比打1985 更有效率。</p>
+<h2 id="拿掃把比拿槍厲害的草莓兵"><a href="#拿掃把比拿槍厲害的草莓兵" class="headerlink" title="拿掃把比拿槍厲害的草莓兵"></a>拿掃把比拿槍厲害的草莓兵</h2><p>我相信大部分的人當完兵後，少數帶得走的技能絕對少不了「打掃」，這邊的打掃泛指掃地、拖地、刷洗浴廁、擦玻璃、洗電風扇冷氣、掃落葉、拔草等等（靠北也太多了吧）。打掃這件事在軍營裡面已經可以算是daily routine，不過還算是大略清潔的程度，一但遇到了連續好幾天下雨的日子，那又是不一樣的世界了。</p>
+<p>大家在國高中的地理課應該都有學過，臺灣中南部的氣候夏雨冬乾，其中5月至9月為雨季，10月至翌年4月為乾季，而我當兵的地方跟時間剛好直接命中暴雨。屏東的天氣大概是這樣的，沒下雨的時候晴空萬里，太陽大到可以把軍營的每個光頭全部曬傷（這句話邏輯好像有點怪，但不管我就是要講），不過一旦開始下雨，那雨勢是打到身上會痛的那種程度（不得不說海陸的營區排水系統真的不錯，在我待過的四個月雨季都沒有發生淹水的情形）。</p>
+<p>說了那麼多，該回到正題了，只要連續下雨天來臨，就代表著我們無止盡的打掃課程：</p>
+<ul>
+<li>下雨第一天的班長：「浴室好像滿髒的欸，掃乾淨一點啊！」</li>
+<li>下雨第二天的班長：「欸！磁磚溝槽跟蓮蓬頭很髒，排水孔也順便清一下！」</li>
+<li>下雨第三天的班長：「呃…… 你們把浴室弄香一點好了，庫房裡面有過期的沐浴乳！」</li>
+<li>下雨第四天的班長：「…… 不管啦你們自己找地方掃就對了！」</li>
+</ul>
+<p>對，碰到連續下雨天都會是這種情形，掃了又掃掃了又掃，掃到不能掃了還是繼續掃！所以說，退伍之後你可能會忘記怎麼用槍，可能會忘記基本教練，但你絕對不會忘記怎麼打掃！</p>
+<h2 id="X！怎麼又是抽籤"><a href="#X！怎麼又是抽籤" class="headerlink" title="Ｘ！怎麼又是抽籤"></a>Ｘ！怎麼又是抽籤</h2><p>你以為抽完軍種之後就不用再面對抽籤了嗎？No！入伍訓（註2）結束之後還會有一次抽籤，而且還是跟一群最會抽籤的一起抽！</p>
+<p>這次的抽籤是要抽之後專長訓（同註2）的專長武器籤，然後武器的種類好像會因為梯次而有所不同，這邊就列出當時的籤種：</p>
+<ol>
+<li>T74 排用機槍：武器輕、容易學、有打靶，打起來就是很爽的那種連發機槍，不過籤數很少</li>
+<li>40榴彈機槍：超重、有點複雜、要跳砲操（註3）、沒有打靶，籤數也不多</li>
+<li>60迫砲：偏重、不算太複雜、要跳砲操、有打靶（木頭彈），籤數不多</li>
+<li>步槍：延續入伍訓的65K2 步槍，最熟悉、同時也是最無聊的、有打靶，籤數最多</li>
+</ol>
+<p><img src="/image/militaryEp3/guns.jpeg" alt="guns"></p>
+<p>看了以上的武器，大家覺得我抽到的是哪個呢？我想應該滿好猜的吧，就是看起來最累的那個，40榴彈機槍……（為什麼我總是抽到這種籤QQ）至於詳細的故事我會留到下一篇再說，因為主要使用這個武器已經是第二年的事情囉～</p>
+<h2 id="哪尼！結訓日當天我還在塗水泥"><a href="#哪尼！結訓日當天我還在塗水泥" class="headerlink" title="哪尼！結訓日當天我還在塗水泥"></a>哪尼！結訓日當天我還在塗水泥</h2><p>經過了兩個月的磨練，菜雞已經可以飛了，新兵已經變成二兵了（欸這是真的，不是幹話）！然而對於我們這種暑期兵來說，兩個月的到來也代表我們的第一年役期即將結束，耶～ 我當時表定的結訓日期是9&#x2F;6，也就是說原則上9&#x2F;6的早上08:00才能離開營區，不過當時長官給我們這梯全部夭八（聽說結訓通常都會給夭八），所以我們9&#x2F;5當天18:00就能離開營區了！因為是最後一天，課表上也沒有安排什麼課程，都讓大家各自去出公差，沒錯，我被分派到的公差就是塗水泥……</p>
+<p>我記得當時結訓前下了不少雨，雖然營區內沒有淹水，但有些東西還是有損壞，而我這次要補的地方是餐廳旁邊的水泥石牆。那邊的水泥牆不是一般在路上看到那種很平的，而是先由石頭堆砌起來，再利用水泥將石頭間的縫隙填滿並固定而成的。我們補牆的流程大概可以分成拆解、堆砌以及灌漿。</p>
+<p>首先是拆解的部分，對於被雨水摧殘過後的石牆，我們把一些鬆動的石頭拿出來，依照大小分堆，看到水泥有凸起來的部分就用石頭打平，確保之後石頭可以好好放進去。</p>
+<p>接下來是堆砌，我們要把剛剛依大小分堆的石頭依序排到坑洞裡，石頭不夠或是size 不合的時候還要去外面撿。（順道一提，撿石頭的地方要從小門出去，嚴格來說算是營區外，所以牆上會有很多那種鐵絲網，真的超爆恐怖……）</p>
+<p>石頭排好之後，最後就是灌漿了，對於一個在都市（希望桃園區算是）長大的小孩，水泥絕對是一個常常看到但從來沒做過的東西，但經過班長「詳細」的說明過後，我們還是硬著頭皮做了。水泥一開始是一袋粉狀物，要經過加水攪拌才會變成常見的樣子，拌勻之後就慢慢倒進各個缺口，直到新補的石頭都有被固定住，重複做好差不多就結束了。這三個步驟雖看似簡單，但由於我們完全是新手，所以整整弄了一個下午，直到打包離營之前才處理好（我們甚至還被連長嘴砲說沒弄好不能離開）。</p>
+<h2 id="歷劫歸來"><a href="#歷劫歸來" class="headerlink" title="歷劫歸來"></a>歷劫歸來</h2><p>最艱苦的部分完工，總該開開心心的打包回家了吧～But（對，壞事必然會隨著好事發生在我身上），還記得我剛剛堆好的水泥石牆嗎？我們下午在堆的時候，天氣都是萬里無雲，但就在我們打包行李的時候，天空開始烏雲密佈，然後下起了大雨。</p>
+<blockquote>
+<p>欸不是，水泥大概需要好幾個小時才會乾，現在突然給我暴雨是怎樣！</p>
+</blockquote>
+<p>於是乎我就在離營的遊覽車上，親眼看我一下午的心血在暴雨無情的沖刷逐漸坍塌，最後甚至不忍直視，也將我波折不已的第一年役期劃下了句點。</p>
+<p><img src="/image/militaryEp4/hat.jpeg" alt="結業證書 &amp; 海陸八角帽"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">註1：天臺是位於連兵舍頂樓的半開放空間，有兩邊，通常用來放掃具、曬衣服以及進行課程。</span><br><span class="line">註2：前六週的訓練為入伍訓，後十週的訓練為專長訓。</span><br><span class="line">註3：砲操是一個戰鬥模擬，包含若干個情境、操作方法以及報告詞，類似單兵戰鬥教練，砲操內容以及內部角色會因武器而有所不同。</span><br></pre></td></tr></table></figure>
+
+<p>感謝願意花時間看到這裡的你，從EP1 到此集就是我第一年發生的所有事情，下一集內容就會開始進入第二年了，還請大家記得收看唷，我們EP4見！</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/life/"># life</a>
+                    
+                        <a href="/tags/military/"># military</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2021/01/05/Deloitte/">2020年，我在Deloitte的那一個月</a>
+            
+            
+            <a class="next" rel="next" href="/2020/11/28/militaryEp3/">EP3｜媽，我上電視了</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Louis Chang | Powered by Louis Chang
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

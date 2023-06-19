@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Louis Chang">
+
+
+
+
+
+<title>EP3｜媽，我上電視了 | Louis&#39; Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Louis&#39; Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Louis&#39; Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">EP3｜媽，我上電視了</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Louis Chang</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">November 28, 2020&nbsp;&nbsp;17:43:54</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E8%BB%8D%E6%97%85%E7%94%9F%E6%B4%BB/">軍旅生活</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="https://images.pexels.com/photos/669275/pexels-photo-669275.jpeg?cs=srgb&dl=pexels-lukas-669275.jpg&fm=jpg" alt="Pexels"></p>
+<blockquote>
+<p>這個系列主要會分享我大學兩個暑假當海陸仔的經驗以及想法（絕對不是因為我多熱愛我的軍旅生活），目前預計會用3到5集的篇幅寫，之後有更新集數的話我也會把其他集的連結放在文章的最後面。如果你是有考慮暑假當兵或是抽到海陸的男生的話，那這系列的內容應該會對你滿有幫助的，如果妳是女生的話也歡迎分享給你的男朋友或是男性朋友～</p>
+</blockquote>
+<h1 id="迷彩中的少數精彩"><a href="#迷彩中的少數精彩" class="headerlink" title="迷彩中的少數精彩"></a>迷彩中的少數精彩</h1><blockquote>
+<p>人生可以是黑白的，但不能是迷彩的</p>
+</blockquote>
+<p>對，確實，軍中的生活真的是偏苦悶，但總不能從頭苦悶到尾吧！人的適應力是很強的，用不了多久就會開始培養起苦中作樂的能力（聽起來怎麼有點悲哀），接下來要跟你分享的就是我第一年在軍中遇到還算有趣的事情～</p>
+<h2 id="體脂肪與他們的產地"><a href="#體脂肪與他們的產地" class="headerlink" title="體脂肪與他們的產地"></a>體脂肪與他們的產地</h2><blockquote>
+<p>免責聲明：食物好吃與否純屬個人觀感，歡迎各方意見討論，還請別為這個筆戰。</p>
+</blockquote>
+<p>在我們生活當中，應該常常聽到人家說當兵會變壯、變瘦之類的，但你有聽說過有人出來之後變胖的嗎？沒錯，就是本人我，兩個月回歸人間後體脂上升了好幾趴，而這一切的一切都要歸咎於海軍陸戰隊新兵訓練中心的伙食。如果能在Google Maps 的新訓中心伙房給星星的話，我認為值得將近四顆星！<br>伙食每天有早午晚三餐，就先從早餐開始吧。相較於其他兩餐，早餐十分簡單，通常都是粥、吐司、饅頭、有時候會有漢堡，然後配上幾樣菜跟一鍋飲料之類的。個人覺得口味大部分都還能接受，當作晨操完填飽肚子已經綽綽有餘，不過當然還是有幾個地雷小物，其中誇張到不行的絕對是那裡的豆腐乳！本人原本其實滿愛吃豆腐乳的（塗在饅頭夾蛋裡面超級好吃），所以我第一次在早餐看到豆腐乳的時候真的是無比興奮，但當我用筷子一口夾起放進嘴裡之後，舌頭居然不由自主地噴了出來。<br>「靠北，這也太鹹了吧，你當我舌頭是水蛭嗎？」<br>接下來的動作當然就是不停的喝粥，盡可能的舒緩我的味蕾。不得不說這個豆腐乳真的是莫忘初衷，每次出現每次鹹，然後我每次都屢試不爽一定要試一口（當時的我到底有什麼毛病）。<br>午餐晚餐的部分相對豪華許多，配置通常是：飯＋1肉＋3菜＋1小菜＋1湯＋1水果 or 甜點（中華豆花或是愛玉之類的），份量的話都還算足夠，熱門的菜色就得去搶一下。你以為這樣就夠豪華了嗎？錯，更厲害的還在後面！有時候生日或是有其他活動的時候，每桌（6人）會額外加一道主菜，我印象中有加過豬腳、披薩、烤鴨，直接比我在外面吃還爽！這樣你大概可以理解我身上體脂肪的來源了吧～</p>
+<h2 id="軍營中最美的女人"><a href="#軍營中最美的女人" class="headerlink" title="軍營中最美的女人"></a>軍營中最美的女人</h2><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=bFFbiZTbSW8">莒光園地 2019.07.04－七七抗戰82周年省思 - YouTube</a><br>大家都知道，在地這麼大人又這麼多的軍營中，女性非常稀少，日本製的壓縮機也……（沒，開玩笑的）。除了各連上的幾位女幹部、髮婆跟營站阿姨之外，軍營中最美的女人絕對是莒光園地的女主播！<br>莒光日是每週都會有一次的活動（有點忘記是禮拜幾了），在莒光日當天則要準時收看「莒光園地」跟寫「大兵手記」。莒光園地是國防部委託華視製作的軍事教育節目，主要在介紹最近的軍演、武器以及其他軍事相關新聞等等，也如同上面所述有漂亮的女主播～<br>而當電視在播莒光園地的時候，我們在底下要做的就是寫完這禮拜的大兵手記，大兵手記又簡稱大兵，有點像是小學聯絡簿裡面的週記和一篇軍事週刊的讀後心得，寫完之後再統一收好給長官批改這樣。我當時每次都超認真寫，想盡可能記錄下當時的感受（反正在裡面也沒幹嘛），也想說以後就算用不到也可以拿出來看看回憶一下。結果殊不知，當我開始寫Medium 想拿來當參考資料時，我可愛的兩本大兵竟然都亡佚了QQ，希望在我寫完這系列之前他們可以出現。</p>
+<h2 id="科技始終來自於人性"><a href="#科技始終來自於人性" class="headerlink" title="科技始終來自於人性"></a>科技始終來自於人性</h2><p><img src="https://img.appledaily.com.tw/images/twapple/640pix/20150407/LN02/LN02_004.jpg" alt="https://img.appledaily.com.tw/images/twapple/640pix/20150407/LN02/LN02_004.jpg"><br>對，<strong>放手機</strong> 絕對是目前國軍制度中僅次於放假最有人性的制度了，我想應該很少大學生能接受沒有手機的生活，剛開始幾天真的像有戒斷症狀一樣手抖到槍拿不起來（純屬虛構，勿認真）。<br>我當時連隊的制度是這樣，每天::中午吃飽跟晚上洗好澡::後可以用手機，時間::0.5 hr - 1.5 hr:: 不等，其他時間就只能眼巴巴地看著從前每天拿在手上的寶貝被關在一格一格的養機場裡面（別懷疑，放手機的櫃子真的叫養機場）。不要看這個時間好像很少（雖然確實比我們螢幕使用時間少多了），但老實講已經算夠用了，本人不知道已經避開了幾次兵變……（威～開玩笑的）<br>順道提醒一下，如同我在EP1提到的，記得帶兩顆充飽的行動電源唷，插座的熱門程度不知道是雞腿的幾百萬倍，如果沒有行動快速像那江河湍急可是搶不到的！</p>
+<h2 id="錢沒有不見，只是變成你喜歡的樣子"><a href="#錢沒有不見，只是變成你喜歡的樣子" class="headerlink" title="錢沒有不見，只是變成你喜歡的樣子"></a>錢沒有不見，只是變成你喜歡的樣子</h2><p>之前好像還沒跟各位說過，當兵一個月薪水6255 NTD（含食宿），扣掉交通費、洗衣費、理髮費等等有的沒的之後，大概還有一兩千塊的quota 可以存起來，四個月就能存八千了，這是我邁向財富自由的第一步！<br>以上的畫面都只在我腦海裡出現過，但當我每次踏入營站的時候，又有一股聲音一直對我說著「錢沒有不見，只是變成你喜歡的樣子」，下一刻我的手上又多了一罐咖啡了……<br>由此可知，阿兵哥的錢真的是好賺，平常在外面看都不看一眼的東西，一到軍營裡面就會突然有股魔力讓我想把它買下來嗚嗚嗚</p>
+<h2 id="在軍中看的那些片片"><a href="#在軍中看的那些片片" class="headerlink" title="在軍中看的那些片片"></a>在軍中看的那些片片</h2><p>哪尼！在軍中居然可以看片？對，沒錯，而且還是跟一群棒子們一起看！<br>在軍中呢，有時候比較閒連長會讓我們在中山室（註1）看電影，第二年沒有鑑測壓力之後我記得甚至看了有五部，金song 金song～ 電影的種類的話就比較侷限，我們當初看過的有搶救雷恩大兵、鋼鐵英雄、來自硫磺島的信、喋血孤城等等的，原則上都是以軍事片為主。But！還是有機會看到一般的電影喔，我第二年甚至還看了會計師、殺手47、金鋼狼，這就要看你們連上的電影收藏量了。不過軍中的電視是沒有網路的，所以不要想說可以用小鴨或是P____hub 看來自世界各地的片片囉！</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">註1：中山室是每間連兵舍都會有的一個多功能室內空間，幾乎所有室內活動都會在這個空間進行，從上課、莒光日到看電影、用手機等等，用途非常廣。</span><br></pre></td></tr></table></figure>
+
+<h2 id="假釋出營"><a href="#假釋出營" class="headerlink" title="假釋出營"></a>假釋出營</h2><p>我相信除了放手機之外，放假絕對是每個大頭兵最期待的事情了吧！原則上放假都是週休二日，不過執行方式會依照各單位而有所不同。（小弟不才，目前還沒認識空軍跟海艦的朋友，所以目前只有海陸跟陸軍的資料）<br>據我在不同單位陸軍當兵的朋友們所述，他們都是六日放假，也就是禮拜五晚上或禮拜六早上離營（這部分等下會再多做說明），禮拜天晚上收假。<br>海陸仔在這部分就有很大的不同喔，因為海陸的營區在龍泉（屏東靠山的地方），對於很多人來說交通很不方便（至少對我這個桃園人來說是啦），所以營區的長官就把休假模式改成<strong>隔週休四日</strong>。個人覺得這個休假模式超讚！不只可以多一個晚上的假期（等於把兩次收假併成一次），省了一半的交通費，對於安排旅遊也很方便，個人認為這真的是國軍中最有人性的制度！<br>還記得前面提到的放假離營時間嗎，原則上是從<strong>假期第一天早上八點</strong>才能離營，也就是所謂的<strong>洞八</strong>，但有時候上面的長官心情好或是大家表現不錯的話，<strong>放假前一天的晚上六點</strong>就能離營，也就是<strong>夭八</strong>。不過夭八假在軍中算是福利，所以有時候會有人數百分比的限制，很幸運地是，我在這兩年只有懇親假放洞八，其他都是夭八！不得不說我當時營區的長官給假期真的是滿大方的～</p>
+<h2 id="媽，我上電視了！"><a href="#媽，我上電視了！" class="headerlink" title="媽，我上電視了！"></a>媽，我上電視了！</h2><p><img src="/image/militaryEp3/diary.jpeg" alt="diary"><br>你以為在軍中的生活只有這樣嗎？每天只有吃喝拉撒睡操課抽菸投飲料嗎？你絕對想不到當兵居然會被找去拍戲！在我第一年當兵的時候，正好TVBS 正在拍攝《女兵日記》，這是他們與國防部合作拍攝的八點檔連續劇，劇情剛好是以海軍陸戰隊為背景，所以他們會在營區裡面到處拍攝（當然是在國防部允許的範圍之內）。<br>在拍戲的過程中，有很多場景需要真正的阿兵哥當臨演，這時候我們就是最專業而且免費的臨演了，我記得大約被叫去拍過兩三次，<strong>大部分</strong>的印象都還不錯啦，就讓我來說說我最有印象的一次吧！當天要拍攝的部分是行軍前準備，主要內容是排長對新兵們做行軍前的提醒。什麼？就這樣而已？對，真的就這樣，我們拍這一幕拍了一個下午…… 剛開始拍攝的時候原本晴空萬里，拍完之後居然下起了豪大雨（屏東的天氣就是這樣），大家發現狀況不對之後，待班長口令一下就直接到旁邊的司令台避雨。看到這邊，你可能會好奇到底為什麼這次公差讓我印象這麼深刻，還記得前幾句粗體的<strong>大部分</strong>嗎？沒錯，接下來要講的就是那少部分，就讓我們繼續看下去～<br>這一幕拍戲是拍一整連集合的過程，演員加上臨演大概有一百多個，你應該可以想像一百多個臭男生擠在司令台避雨是多麽擁擠的狀況了吧！但就在司令台已經被擠到水泄不通時，某知名男演員居然還大剌剌的躺在那邊翹二郎腿！如果是睡著沒發現就算了，大家剛進去的時候他還有抬頭起來看一眼，之後就若無其事的繼續躺在那邊，差點沒拿鋼盔往他肚子捶下去（沒，開玩笑的，純粹效果）。不過我當時是真的滿不高興的，覺得這有點誇張，好歹我們也是免費來當臨演的耶（抱歉可能是本人的心眼比較小）！不過還是得澄清一下，排除這件事的話劇組對我們都還算滿友善的，也讓我在短短的四個月役期留下了最特別的回憶。<br><img src="/image/militaryEp3/me.jpeg" alt="me"></p>
+<p>感謝願意花時間看到這裡的你，以上是我第一年（前兩個月）中還稱得上美好的回憶，下一集內容會是多數黑白的回憶，還請大家記得收看唷，我們EP3見！</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/life/"># life</a>
+                    
+                        <a href="/tags/military/"># military</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/12/13/militaryEp4/">EP4｜哪尼！結訓日我還在塗水泥？</a>
+            
+            
+            <a class="next" rel="next" href="/2020/11/14/militaryEp2/">EP2｜龍泉？有很多啤酒喝嗎？</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Louis Chang | Powered by Louis Chang
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

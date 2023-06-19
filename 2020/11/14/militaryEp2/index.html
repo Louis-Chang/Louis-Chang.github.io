@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Louis Chang">
+
+
+
+
+
+<title>EP2｜龍泉？有很多啤酒喝嗎？ | Louis&#39; Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Louis&#39; Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Louis&#39; Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">EP2｜龍泉？有很多啤酒喝嗎？</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Louis Chang</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">November 14, 2020&nbsp;&nbsp;17:43:36</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E8%BB%8D%E6%97%85%E7%94%9F%E6%B4%BB/">軍旅生活</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="https://images.pexels.com/photos/1927974/pexels-photo-1927974.jpeg?cs=srgb&dl=pexels-specna-arms-1927974.jpg&fm=jpg" alt="Army with gun"></p>
+<blockquote>
+<p>這個系列主要會分享我大學兩個暑假當海陸仔的經驗以及想法（絕對不是因為我多熱愛我的軍旅生活），目前預計會用3到5集的篇幅寫，之後有更新集數的話我也會把其他集的連結放在文章的最後面。如果你是有考慮暑假當兵或是抽到海陸的男生的話，那這系列的內容應該會對你滿有幫助的，如果妳是女生的話也歡迎分享給你的男朋友或是男性朋友～</p>
+</blockquote>
+<h1 id="必需品"><a href="#必需品" class="headerlink" title="必需品"></a>必需品</h1><p>相信各位在進去蹲之前一定都會去Google要帶些什麼，所以像什麼電話卡、內褲之類的就不再贅述了，我想額外補充的是個人認為去「龍泉」這個地方一定要帶的幾樣東西：</p>
+<ol>
+<li>防曬乳</li>
+<li>蘆薈（或是任何可以舒緩曬傷的東西）</li>
+<li>爽身粉</li>
+<li>蚊蟲叮咬的藥</li>
+<li>有線耳機</li>
+<li>隱形眼鏡（打靶用，如果你沒配眼鏡但有一點近視的話）</li>
+</ol>
+<blockquote>
+<p>龍泉有三寶，螞蟻、太陽、含羞草</p>
+</blockquote>
+<p>沒錯，龍泉的太陽真的是沒在跟你開玩笑，事前事後都要準備好（？<br>現在就連iphone 12 都沒附有線耳機了，為什麼我還是建議大家帶呢？這是因爲大家現在都喜歡戴藍牙耳機，在台北搭捷運一定要掛個Airpods 在耳朵上才夠潮。然而在軍營中手機會被強制安裝<strong>MDM</strong>，這個東西是會鎖藍牙的，所以如果想一邊跟女朋友講電話一邊滑ig 的話請務必要帶一個有線耳機！<br>隱形眼鏡的部分呢，是因為小弟我視力有點奇怪，右眼近視150左眼正常，平常兩眼看得很清楚所以都沒配眼鏡。直到我在射擊預習的時候才發現慘了，左眼閉起來之後很模糊，之後肯定看不到175公尺外的靶，所以才在打靶前的那個休假緊急去配一下隱形眼鏡，相較眼鏡便宜又快速！</p>
+<h1 id="入伍第一天"><a href="#入伍第一天" class="headerlink" title="入伍第一天"></a>入伍第一天</h1><p>終於還是來到面對現實的那天，第一天早上呢，大家在徵集令上寫的地點集合完畢之後，在胸口貼上「愛國愛鄉」的貼紙，接著就準備踏上 屍̶速̶ 役男列車。不開玩笑，我記得當天火車上每個人的臉都臭的跟狗屎一樣，沒有人笑得出來，中午發的便當也吃不下（搞得好像要上戰場一樣），只能抓著僅存的幾個小時狂滑手機。<br>我們出發的時間大概是早上10點，中間經過轉乘各式各樣的交通工具之後（因為到營區很麻煩），大概在傍晚左右抵達營區。下車之後第一件事情是分班（這裡的班跟我們所知的班級不同，在後面章節會說明），幹部們迅速的把每個人依照地區跟身高分成若干個班（每個營區好像不一樣，我當時是9個啦），之後接著就是剃頭、拿裝備、營站採買、填資料等等一連串的無聊事情就洗洗睡了。<br>當天讓我超級困擾的是要洗那種超級戰鬥澡，然後因為要超級迅速，所以班長叫我們兩個人洗一間（欸不是，我跟這群人才第一天見面，甚至還沒講過幾句話＝＝），幸好過程中沒發生什麼尷尬的事，平安度過了第一天，在此順便附上<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=JgglBMSrszw">High咖戰鬥澡經歷的影片</a>。</p>
+<h1 id="適應週"><a href="#適應週" class="headerlink" title="適應週"></a>適應週</h1><p>就是指入伍的第一個星期，這幾天不會有任何辛苦的操課，協助新兵適應軍中生活。但是說真的，那星期超級無聊，每天就是吃飯睡覺填資料基本教練還有聽一堆講座，順便招募。唯一讓我感覺激似回歸人間的是最後一天有個叫「肝膽相照」的活動，可以上營站買飲料零食，各班上去表演，幹部們卸下面具講講話，基本上也是協助新兵適應軍中生活這樣。</p>
+<h1 id="開訓典禮"><a href="#開訓典禮" class="headerlink" title="開訓典禮"></a>開訓典禮</h1><p>其實跟國小國中高中的升旗典禮流程差不多，只是大概嚴格個數百萬倍，在不對的時間抓個癢就會被幹到飛起來那種。開訓典禮就是代表你各位即將進入正式軍旅生活，皮最好給我繃緊一點！</p>
+<h1 id="每日生活"><a href="#每日生活" class="headerlink" title="每日生活"></a>每日生活</h1><p>當兵少數幾個好處就是，生活真的規律到不行，每天<strong>跑爆吃爆睡爆</strong>，健康到不行，尤其是對於身體狀況逐漸母湯的大學生們來說。每天主要的行程大概是這樣（時間僅供參考，有時候會彈性調整）：<br><img src="/image/militaryEp2/schedule.png" alt="schedule"></p>
+<h1 id="課程簡介"><a href="#課程簡介" class="headerlink" title="課程簡介"></a>課程簡介</h1><p>軍中的課程主要就以下這幾種，而這些項目都是鑑測的考試項目。至於鑑測又是什麼呢？鑑測之於入伍訓就大概像是學測之於高中，鑑測考什麼，上課就上什麼，至關重要。</p>
+<ol>
+<li>刺槍術</li>
+<li>單兵戰鬥教練</li>
+<li>手榴彈投擲</li>
+<li>實彈射擊</li>
+<li>學科</li>
+<li>槍枝大部分解結合</li>
+<li>清驗槍</li>
+<li>3000公尺徒手跑步</li>
+<li>伏地挺身＆仰臥起坐</li>
+<li>九秒戴上防毒面具</li>
+</ol>
+<h1 id="刺槍術"><a href="#刺槍術" class="headerlink" title="刺槍術"></a>刺槍術</h1><p>個人覺得是個非常具有表演性質的項目，就是全連排個陣型，<strong>同步</strong>操作各個動作。有看到重點了嗎？對，就是「同步」！要全連一百多個人同個節奏同個速度做動作真的是頗難，每次在大熱天練刺槍都已經快掛了，看到有人放槍真的是會厭世到不行＝＝</p>
+<h1 id="單兵戰鬥教練"><a href="#單兵戰鬥教練" class="headerlink" title="單兵戰鬥教練"></a>單兵戰鬥教練</h1><p>「單兵注意！前方有敵鹿柴一座，試問單兵該如何處置？」單兵戰鬥教練，簡稱單戰，剛剛那一句話就是其中一句報告詞（對，什麼拔草測風向那些的都是）。單戰會分成10戰（現在好像變成6戰了），每一戰都是不同的情境，要搭配報告詞做出相對應的動作。對於單戰嘛，個人是覺得滿有趣的，有點像在玩生存遊戲，而且還會看到別人（或自己）噴裝之類的，雖然報告詞真的是滿蠢的。原則上練習都要去北營完整的單戰場，但我們當時其實沒去過幾次，都在南營練幾戰而已，不過已經足夠讓我們濕到不行了，大概是從內褲濕到鋼盔那種程度。</p>
+<h1 id="手榴彈投擲"><a href="#手榴彈投擲" class="headerlink" title="手榴彈投擲"></a>手榴彈投擲</h1><p>手榴彈投擲有分一般投擲跟野戰投擲，一般投擲只要26公尺然後不要太歪就及格了，野投的話就是要在一定的距離投進門窗的板子裡面，我真的覺得超難！我印象中好像投了很多顆才進一顆，連上投的好的好像也不多，所以那時候士官長還爆氣＝＝。鑑測的時候我也是正常發揮，一顆都沒進，野投直接零分……</p>
+<h1 id="實彈射擊"><a href="#實彈射擊" class="headerlink" title="實彈射擊"></a>實彈射擊</h1><p>海陸打靶的地方叫「隘寮靶場」，距離營區開車大概10分鐘，據說上面有非常多鬼故事（不知道是不是各個靶場都這樣）。然後隘寮靶場其實並不是海陸專用，另一批人是涼山特勤隊（陸軍一支跟鬼一樣的特種部隊），還記得打靶的時候還遇到他們在隔壁打狙擊槍，直接被屌虐一頓。回歸正題，打靶子彈有6發，打中4發及格，滿靶的話我記得好像有特別待遇喔。Btw，因為在靶場有真槍實彈，所以在那邊都是無比嚴肅，只要一出包絕對是會被幹飛，記得要注意一下。</p>
+<h1 id="學科"><a href="#學科" class="headerlink" title="學科"></a>學科</h1><p>主要考一些軍事跟武器的知識，但會直接給一個題庫，背起來就對了！</p>
+<h1 id="槍枝大部分解結合"><a href="#槍枝大部分解結合" class="headerlink" title="槍枝大部分解結合"></a>槍枝大部分解結合</h1><p>簡單來說就是把槍拆掉再組回來，然後要比速度這樣。其實不會很難啦，因為在幾週內會練習個n次，如果你是槍班（軍械班）的話兩三天就會拆組個好幾次，我看他們應該是閉著眼睛拆也能拆比我快。</p>
+<h1 id="清驗槍"><a href="#清驗槍" class="headerlink" title="清驗槍"></a>清驗槍</h1><p>清驗槍就是每次射擊完要做的槍枝檢查，不過考試的形式是要全部人一起做，然後口令動作要<em>同步</em>（對，又是同步＝＝），所以難不是難在動作而是全部人的一致性。我記得當時還說好要在某幾個比較明顯的橋段慢下來說，減少有人放槍的機率（送上槍機的部分）。</p>
+<h1 id="3000公尺徒手跑步"><a href="#3000公尺徒手跑步" class="headerlink" title="3000公尺徒手跑步"></a>3000公尺徒手跑步</h1><p>我記得當時每天晨操只要沒下雨都會跑，跑的時候還要對腳步跟答數，所以跑了好幾個禮拜之後大家幾乎都扛得住了。標準時間我記得是17分鐘，真的不會很快，能跟上部隊的話就能及格了！我還記得有一次給連長帶跑我們好像跑了15還14分鐘，他說他以前在海軍官校的時候是田徑隊隊長……</p>
+<h1 id="伏地挺身＆仰臥起坐"><a href="#伏地挺身＆仰臥起坐" class="headerlink" title="伏地挺身＆仰臥起坐"></a>伏地挺身＆仰臥起坐</h1><p>我有點忘記及格的次數是多少了，但大部分的人都會及格，想知道為什麼嗎？因為測驗的時候是兩個人一組測的，所以這樣有懂我的意思了吧，嘻嘻。</p>
+<h1 id="九秒戴上防毒面具"><a href="#九秒戴上防毒面具" class="headerlink" title="九秒戴上防毒面具"></a>九秒戴上防毒面具</h1><p>這個部分我記得好像只練過一兩次就去考試了，因為連兵舍庫房裡面完整的只剩三個，其他束帶都斷了所以沒辦法練……不過我記得鑑測的時候好像滿多人通過的，但十分殘念，我當時因為沒戴好所以沒通過這部分QQ</p>
+<h1 id="國軍Online-補充講義（海陸適用）"><a href="#國軍Online-補充講義（海陸適用）" class="headerlink" title="國軍Online 補充講義（海陸適用）"></a>國軍Online 補充講義（海陸適用）</h1><p>相信各位讀著們如果對軍事不是特別有研究的話，一定會對一些軍隊編制或是術語等等的非常陌生吧！於是我引用了一位前輩寫的，描述十分生動，有興趣的可以看看，沒興趣的話就…… 還是請繼續看我的文章吧！（以下內容引用自PTT <a target="_blank" rel="noopener" href="https://moptt.tw/p/Militarylife.M.1584716551.A.FF2">[哈拉] f062梯屏東龍泉海軍陸戰隊(海陸)結訓心得</a>，若有侵權請告知立即刪除）</p>
+<ol>
+<li>士官長（又稱老ㄟ）：管理所有士官 (班長們) 的長官，高階長官平時通常不會出現，如果出現那通常代表部隊的節奏已經偏離正軌，需要「整肅軍心」。倒是連上的防毒面具課是由士官長講授。</li>
+<li>連長 (軍官，可能又稱大ㄟ)：有點像是一個系的系主任，通常也不太管底層的瑣事，遇有重要場合會出來宣達一些事項，順便凝聚連隊向心力，和弟兄們都處得不錯。</li>
+<li>輔導長 (軍官，又稱Poㄟ)：有點像是一個系的系關懷導師，主要主持每週四莒光課，有生活上的問題應該可以找他聊？</li>
+<li>排長 (軍官)：大部分的時候會背值星官，以及規劃打理連上事務，和弟兄們會有很頻繁密切的接觸，事情應該不少ＸＤ 請務必多多配合排長的領導。</li>
+<li>預財士：負責連上大部分和錢有關的事務，也會協助平常其他班長會做的事，所以我們仍然是稱呼預財士為班長 (鋼盔套藍色識別帶，我覺得這個顏色很帥～)。</li>
+<li>各班班長：從第１班到第９班，每班配給一名班長，班長們除了休假時需要統計自己的班兵回報狀況，也各自負責連隊上特定的工作，也都有各自的武器專長，其實就像一個系的教授一樣，每個教授也有自己的導生，平常也要作研究 (受訓)，上課時間才會出來上課，平常是看不到人的。</li>
+</ol>
+<h1 id="特別用語"><a href="#特別用語" class="headerlink" title="特別用語"></a>特別用語</h1><ul>
+<li>你各位：據說是從英文的You guys 直翻過來的</li>
+<li>一偶，一偶，一痾：「一二」的各種語調</li>
+<li>內務：就是你個人的櫃子、床鋪等等的東西</li>
+<li>永遠忠誠：海軍陸戰隊格言</li>
+<li>不打勤，不打懶，專打不長眼：不要白目</li>
+<li>數字：夭兩三四五六拐八勾洞</li>
+</ul>
+<h1 id="海陸歌喉讚"><a href="#海陸歌喉讚" class="headerlink" title="海陸歌喉讚"></a>海陸歌喉讚</h1><blockquote>
+<p>軍歌是敘述戰爭、社會時局、主戰、反戰或作戰情緒的創作歌曲，可以是進行曲、部隊歌、行軍歌、愛國歌、民歌、流行歌、輓歌等形式。軍隊遵循命令學習哼唱的歌。軍歌不僅是在部隊行進間，提振士氣用，也可以提升部隊的榮譽感，凝聚向心力。<br>— 取自維基百科</p>
+</blockquote>
+<p>沒錯，軍歌是每個阿兵哥都要會的東西，進去之後絕對唱到比你高中校歌還熟，這邊提供我當初學幾首的給各位：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=_-DTglSNmwk">陸戰隊隊歌</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=yZjWidgh0rc">戰鬥的陸戰隊</a></li>
+<li>大地勇士（找不到QQ）</li>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=7oaQxHDUQNc">軍紀歌</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=VoDjfcrJ2ss">我有一支槍</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=oA08wyfcgkE">英雄好漢在一班</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=KKCghHyyOx8">龍泉情歌</a> （海陸仔必唱！）</li>
+</ul>
+<p>感謝願意花時間看到這裡的你，以上差不多就是我入伍前發生的所有事情，入伍之後的事情會寫在下一篇的文章，還請大家記得收看唷，我們EP2見！</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/life/"># life</a>
+                    
+                        <a href="/tags/military/"># military</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/11/28/militaryEp3/">EP3｜媽，我上電視了</a>
+            
+            
+            <a class="next" rel="next" href="/2020/11/07/militaryEp1/">EP1｜Ｘ！我抽到海陸了</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Louis Chang | Powered by Louis Chang
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

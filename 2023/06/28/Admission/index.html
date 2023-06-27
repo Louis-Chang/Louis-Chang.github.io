@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Louis Chang">
+
+
+
+
+
+<title>2023 Fall 美國 MS IS/CS 研究所 申請總結 | Louis&#39; Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Louis&#39; Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Louis&#39; Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">2023 Fall 美國 MS IS/CS 研究所 申請總結</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Louis Chang</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">June 28, 2023&nbsp;&nbsp;19:48:54</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="https://images.pexels.com/photos/1222438/pexels-photo-1222438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="America"></p>
+<blockquote>
+<p>這篇文章主要會分享我在2023申請美國MS IS&#x2F;CS 的過程與心得，現在已經上岸了！如果你是有考慮出國讀研究所的話，希望可以把我目前的經驗及心得分享給，如果沒有的話，也請幫我分享給你所有想出國讀書的朋友們～</p>
+</blockquote>
+<p>呼～距離上次寫文章已經有兩年了，經過這兩年申請還有工作的雙重荼毒後差點不知道從何開始QQ 這篇是回鍋之後的第一篇，篇幅略小請勿見怪！</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>從大一就嚷嚷著要出國讀書，今年總算把自己立了六年的flag兌現，有時候還是覺得不太真實。這次飛往美國對我來說著實是個大挑戰，大學畢業以前我都一直生活在桃園（抱歉了中壢），出社會工作之後也只是在台北而已，雖然中途因為當兵跑去了屏東（詳情請見當兵系列文，我會再找時間補完第二年的故事！），但目前都沒有自己在陌生的城市生活過，遑論是如此遙遠的他鄉。</p>
+<p>出國留學對我來說，除了拿文憑跟日後找工作之外，最重要的還是給我自己一個開拓視野及體驗的機會。一直以來我都不是一個特別聰明或是善於想像的人，很多事情若沒有親自體會過的話，我真的很難想像甚至理解，希望兩年後的我不只對這個世界有更多的認識，也能用更沉穩的心面對生活中的所有。</p>
+<h1 id="申請結果"><a href="#申請結果" class="headerlink" title="申請結果"></a>申請結果</h1><p><strong>CMU MISM 16-Month</strong></p>
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9c6b38d1-d1af-4c0f-b278-c2d887fb6af0/Screenshot_2023-06-20_at_5.12.23_PM.png" alt="Screenshot 2023-06-20 at 5.12.23 PM.png"></p>
+<p>今年的申請結果有點出乎意料，從來沒想過自己會被CMU 錄取。原本只是抱著買樂透的心情申請，第一波放榜的時候沒收到也想說涼了，沒抱太大希望，沒想到最後居然來一個海底撈月…</p>
+<p>一開始我對自己的GRE 成績沒什麼自信（畢竟考了三次仍然沒有320），很怕準備那麼久最後一場空，於是在配置選校組合的時候過度偏重於踏實跟保守，保底學校放太多，應該多投個一兩間夢幻校拚一下暴擊，畢竟有投有希望，沒投的話機率就是0（當初還想說不要浪費錢去投夢幻，好像拿到offer但沒要去就不浪費錢一樣^_^）</p>
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><h2 id="Education"><a href="#Education" class="headerlink" title="Education"></a>Education</h2><ul>
+<li>B.B.A. in Information Management, NCU（中央資管）</li>
+<li>GPA<ul>
+<li>NCU: 3.71&#x2F;4.3</li>
+<li>WES: 3.66&#x2F;4.3</li>
+</ul>
+</li>
+</ul>
+<h2 id="Test-Score"><a href="#Test-Score" class="headerlink" title="Test Score"></a>Test Score</h2><ul>
+<li>TOEFL: 101 (R26, L30, S21, W24)</li>
+<li>GRE: 316 (V151, Q165, AW3.5) → 有些program 沒交</li>
+</ul>
+<h2 id="Work-Experience"><a href="#Work-Experience" class="headerlink" title="Work Experience"></a>Work Experience</h2><ul>
+<li>Software Engineer at 國泰世華（2021&#x2F;07 – 2023&#x2F;06）</li>
+<li>Software Engineer Intern at 國泰世華（2021&#x2F;03 – 2021&#x2F;06）</li>
+</ul>
+<h2 id="Research-Experience"><a href="#Research-Experience" class="headerlink" title="Research Experience"></a>Research Experience</h2><ul>
+<li>N&#x2F;A</li>
+</ul>
+<h2 id="Other-Experience"><a href="#Other-Experience" class="headerlink" title="Other Experience"></a>Other Experience</h2><ul>
+<li>畢業專題展執行組</li>
+<li>宿營執行組</li>
+</ul>
+<h2 id="Publications"><a href="#Publications" class="headerlink" title="Publications"></a>Publications</h2><ul>
+<li>N&#x2F;A</li>
+</ul>
+<h2 id="Project"><a href="#Project" class="headerlink" title="Project"></a>Project</h2><ul>
+<li>大學畢業專題</li>
+</ul>
+<h2 id="LoR"><a href="#LoR" class="headerlink" title="LoR"></a>LoR</h2><ul>
+<li>公司主管</li>
+<li>修課教授</li>
+<li>專題指導教授</li>
+</ul>
+<hr>
+<h1 id="時間軸"><a href="#時間軸" class="headerlink" title="時間軸"></a>時間軸</h1><h2 id="2022"><a href="#2022" class="headerlink" title="2022"></a>2022</h2><h3 id="March-April"><a href="#March-April" class="headerlink" title="March - April"></a>March - April</h3><ul>
+<li>Mason GRE 三四月假日班</li>
+<li>Mason GRE 三四月假日班</li>
+</ul>
+<h3 id="May"><a href="#May" class="headerlink" title="May"></a>May</h3><ul>
+<li>原本報了五月中第一場GRE，結果剛好確診 ^_^，只好往後移</li>
+</ul>
+<h3 id="June"><a href="#June" class="headerlink" title="June"></a>June</h3><ul>
+<li>6&#x2F;18 GRE 一戰 310 (V149, Q161, AW3.5)</li>
+</ul>
+<h3 id="July"><a href="#July" class="headerlink" title="July"></a>July</h3><ul>
+<li>7&#x2F;10 GRE 二戰 316 (V151, Q165, AW3.0) → 後來選這次</li>
+</ul>
+<h3 id="August"><a href="#August" class="headerlink" title="August"></a>August</h3><ul>
+<li>8&#x2F;20 GRE 三戰 311 (V148, Q163, AW 3.5)</li>
+</ul>
+<h3 id="September"><a href="#September" class="headerlink" title="September"></a>September</h3><ul>
+<li>準備TOEFL，因為大四那年已經在SK2上過課，甚至還考過了兩次（自己都不敢講），所以這次只有把把以前的講義拿出來複習跟寫TPO</li>
+</ul>
+<h3 id="October"><a href="#October" class="headerlink" title="October"></a>October</h3><ul>
+<li>10&#x2F;15 TOEFL 一戰 101 (R26, L30, S21, W24)</li>
+<li>考完休息一兩天就開始邊選校、找推薦人跟找潤稿</li>
+</ul>
+<h3 id="November"><a href="#November" class="headerlink" title="November"></a>November</h3><ul>
+<li>開始瘋狂準備文件</li>
+</ul>
+<h3 id="December"><a href="#December" class="headerlink" title="December"></a>December</h3><ul>
+<li>12&#x2F;15 繳交UCI 跟USC 總共四個 program 的申請</li>
+</ul>
+<h2 id="2023"><a href="#2023" class="headerlink" title="2023"></a>2023</h2><h3 id="January"><a href="#January" class="headerlink" title="January"></a>January</h3><ul>
+<li>1&#x2F;10 繳交CMU 跟U of Arizona</li>
+<li>1&#x2F;15 繳交UIUC, UT Dallas</li>
+<li>1&#x2F;16 繳交UW</li>
+</ul>
+<h3 id="February"><a href="#February" class="headerlink" title="February"></a>February</h3><ul>
+<li>2&#x2F;1 繳交UMD</li>
+<li>2&#x2F;15 繳交TAMU</li>
+</ul>
+<h3 id="March"><a href="#March" class="headerlink" title="March"></a>March</h3><ul>
+<li>3&#x2F;1 繳交NYU</li>
+<li>3&#x2F;15 繳交UIC</li>
+</ul>
+<h1 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h1><p>今年申請的成績我非常滿意，甚至還超出我原本的期望好多好多，除了自己不知從何來的一波暴擊之外，身邊貴人們帶給我的幫助更是不可勝數。</p>
+<p>今年我能交給自己如此滿意的成績單，最大功臣絕對是我女朋友也是我最好的戰友亞亞！從GRE、TOEFL、申請到最後準備出國，真的很幸運這一路上都能一起互相砥礪，我才能堅持走過這段日子，不然我應該會對我的留學夢抱著深深的遺憾。</p>
+<p>還有非常重要的是我爹娘，感謝你們從小就砸了不少錢栽培我這個不孝子，研究所還讓我選一間貴到不行的私校，等我畢業之後再從美國吸金還給你們啦～</p>
+<p>再來是mentorship 的夥伴們（雖然這是申請2022 Fall 時的事情，至於為何又再申請一年就是另一個故事了），感謝Michael、竣宇跟新雅提供好多申請資源，尤其是新雅耐心地幫我看各式各樣的文件、Maggie 幫我解答CMU 的一堆問題、還有program的其他夥伴一起讀我不忍直視的SOP。</p>
+<p>也想感謝我在大樹的好同事們，謝謝Boss、Wayne 還有Ben 一直都是這麼給力，我才能把一部分心力放在準備申請。</p>
+<p>特別感謝遠在天邊的留學仔們，感謝孫、漢斯塔、馬它、當初陪我練口說的SK2夥伴樹雨、怡婷、景翔、鈺翎。</p>
+<p>對於上面提到的貴人，還有許多以前幫助過我的朋友們，我真的由衷感謝。</p>
+<hr>
+<p>今年八月我就要前往匹茲堡開始留學生活了，希望到時候還有餘力寫寫文章分享，如果對申請或是CMU 相關的事情有興趣的話歡迎私訊我的<a target="_blank" rel="noopener" href="https://www.linkedin.com/in/hungyichang-louis/">Linkedin</a>，謝謝大家！</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/studyAbroad/"># studyAbroad</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2021/05/08/CAP1/">我的國泰CAP實習之路（上）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Louis Chang | Powered by Louis Chang
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
